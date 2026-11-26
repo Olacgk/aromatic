@@ -1,14 +1,14 @@
 import { redirect } from "next/navigation";
 import { Sparkles } from "lucide-react";
-import { checkPassword, setSession } from "@/lib/auth";
+import { adminLogin } from "@/lib/auth";
 import { Button, Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/admin/ui";
 
 export default async function Login({ searchParams }: { searchParams: Promise<{ error?: string }> }) {
   const { error } = await searchParams;
   async function login(fd: FormData) {
     "use server";
-    if (!checkPassword(String(fd.get("password")))) redirect("/admin/login?error=1");
-    await setSession();
+    const r = await adminLogin(String(fd.get("email") ?? ""), String(fd.get("password") ?? ""));
+    if (r !== "ok") redirect(`/admin/login?error=${r}`);
     redirect("/admin");
   }
   return (
@@ -26,14 +26,19 @@ export default async function Login({ searchParams }: { searchParams: Promise<{ 
         <CardContent>
           <form action={login} className="grid gap-4">
             <div>
-              <label className="label">Mot de passe</label>
-              <input name="password" type="password" required autoFocus className="input" />
+              <label className="label">Email</label>
+              <input name="email" type="email" required autoFocus autoComplete="username" className="input" />
             </div>
-            {error && <p className="text-sm text-destructive">Mot de passe incorrect.</p>}
+            <div>
+              <label className="label">Mot de passe</label>
+              <input name="password" type="password" required autoComplete="current-password" className="input" />
+            </div>
+            {error && (
+              <p className="text-sm text-destructive">
+                {error === "denied" ? "Ce compte n'a pas accès à l'administration." : "Email ou mot de passe incorrect."}
+              </p>
+            )}
             <Button size="default" className="w-full">Se connecter</Button>
-            <p className="text-center text-xs text-muted-foreground">
-              Par défaut : admin123 (variable ADMIN_PASSWORD dans .env.local)
-            </p>
           </form>
         </CardContent>
       </Card>

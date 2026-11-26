@@ -1,12 +1,15 @@
-import { readDB } from "@/lib/db";
+import Flash from "@/components/admin/Flash";
+import { readAdminDB } from "@/lib/admin-data";
 import { savePage } from "../actions";
 import TrFields from "@/components/admin/TrFields";
 import { Button, Card, CardContent, CardDescription, CardHeader, CardTitle, PageHeader } from "@/components/admin/ui";
 
-export default async function AdminPages() {
-  const { pages } = await readDB();
+export default async function AdminPages({ searchParams }: { searchParams: Promise<{ error?: string }> }) {
+  const { error } = await searchParams;
+  const { pages } = await readAdminDB(["pages"]);
   return (
     <>
+      <Flash error={error} />
       <PageHeader title="Pages" description="Pages légales et d'information affichées dans le pied de page." />
       <div className="grid gap-4 xl:grid-cols-2">
         {pages.map((p) => (

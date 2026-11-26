@@ -10,6 +10,7 @@ import {
   LogOut,
   Menu,
   Moon,
+  CreditCard,
   Package,
   PanelLeftClose,
   PanelLeftOpen,
@@ -17,6 +18,7 @@ import {
   ShoppingBag,
   Sparkles,
   Sun,
+  Users,
   X,
   ExternalLink,
   type LucideIcon,
@@ -36,7 +38,14 @@ const SECTIONS: Section[] = [
       { label: "Catégories", href: "/admin/categories", icon: FolderTree },
     ],
   },
-  { label: "Ventes", items: [{ label: "Commandes", href: "/admin/orders", icon: ShoppingBag }] },
+  {
+    label: "Ventes",
+    items: [
+      { label: "Commandes", href: "/admin/orders", icon: ShoppingBag },
+      { label: "Paiements", href: "/admin/payments", icon: CreditCard },
+      { label: "Clients", href: "/admin/customers", icon: Users },
+    ],
+  },
   {
     label: "Contenu",
     items: [
@@ -51,6 +60,8 @@ const LABELS: Record<string, string> = {
   products: "Produits",
   categories: "Catégories",
   orders: "Commandes",
+  customers: "Clients",
+  payments: "Paiements",
   pages: "Pages",
   settings: "Paramètres",
   new: "Nouveau",

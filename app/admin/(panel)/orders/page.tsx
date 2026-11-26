@@ -1,14 +1,17 @@
+import Flash from "@/components/admin/Flash";
 import { Mail, MapPin, Phone } from "lucide-react";
-import { readDB } from "@/lib/db";
+import { readAdminDB } from "@/lib/admin-data";
 import { formatPrice } from "@/lib/format";
 import { ORDER_STATUSES, orderStatus } from "@/lib/order-status";
 import { setOrderStatus } from "../actions";
 import { Badge, Button, Card, CardContent, CardHeader, CardTitle, PageHeader } from "@/components/admin/ui";
 
-export default async function AdminOrders() {
-  const { orders } = await readDB();
+export default async function AdminOrders({ searchParams }: { searchParams: Promise<{ error?: string }> }) {
+  const { error } = await searchParams;
+  const { orders } = await readAdminDB(["orders"]);
   return (
     <>
+      <Flash error={error} />
       <PageHeader title="Commandes" description={`${orders.length} commande(s) au total.`} />
       {orders.length === 0 && <p className="text-sm text-muted-foreground">Aucune commande pour le moment.</p>}
       <div className="grid gap-4 xl:grid-cols-2">

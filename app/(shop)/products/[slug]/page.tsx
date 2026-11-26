@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getI18n, readLocalizedDB } from "@/lib/i18n/server";
 import AddToCart from "@/components/AddToCart";
+import FavoriteButton from "@/components/FavoriteButton";
 import Gallery from "@/components/Gallery";
 import Reveal from "@/components/Reveal";
 import Section from "@/components/Section";
@@ -18,7 +19,10 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   return (
     <>
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-12 md:grid-cols-2">
-        <Gallery images={images} name={p.name} />
+        <div className="relative">
+          <Gallery images={images} name={p.name} />
+          <FavoriteButton productId={p.id} className="absolute end-4 top-4 z-10 !size-11" />
+        </div>
         <Reveal className="md:pt-8">
           {cat && (
             <Link href={`/collections/${cat.slug}`} className="eyebrow link-u">

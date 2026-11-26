@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { AlertTriangle, CircleDollarSign, FolderTree, Package, ShoppingBag } from "lucide-react";
-import { readDB } from "@/lib/db";
+import { readAdminDB } from "@/lib/admin-data";
 import { formatPrice } from "@/lib/format";
 import { orderStatus } from "@/lib/order-status";
 import {
@@ -9,7 +9,7 @@ import {
 } from "@/components/admin/ui";
 
 export default async function Dashboard() {
-  const { products, orders, categories } = await readDB();
+  const { products, orders, categories } = await readAdminDB(["products", "orders", "categories"]);
   const live = orders.filter((o) => o.status !== "cancelled");
   const revenue = live.reduce((n, o) => n + o.total, 0);
   const pending = orders.filter((o) => o.status === "pending").length;

@@ -3,14 +3,17 @@ import { getI18n, readLocalizedDB } from "@/lib/i18n/server";
 import { CartProvider } from "@/components/CartProvider";
 import CartDrawer from "@/components/CartDrawer";
 import Header from "@/components/Header";
+import { AccountProvider } from "@/components/AccountProvider";
+import { getCustomer } from "@/lib/customer-auth";
 import { LocaleProvider } from "@/components/LocaleProvider";
 
 export const dynamic = "force-dynamic";
 
 export default async function ShopLayout({ children }: { children: React.ReactNode }) {
-  const [{ settings: s, categories }, { locale, t }] = await Promise.all([readLocalizedDB(), getI18n()]);
+  const [{ settings: s, categories }, { locale, t }, me] = await Promise.all([readLocalizedDB(), getI18n(), getCustomer()]);
   return (
     <LocaleProvider locale={locale}>
+      <AccountProvider name={me?.name ?? null} favorites={me?.favorites ?? []}>
       <CartProvider>
         <div className="shop contents">
           {s.promo.enabled && (
@@ -68,6 +71,7 @@ export default async function ShopLayout({ children }: { children: React.ReactNo
           </footer>
         </div>
       </CartProvider>
+      </AccountProvider>
     </LocaleProvider>
   );
 }

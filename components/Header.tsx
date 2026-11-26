@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
 import { useCart } from "./CartProvider";
 import { useI18n } from "./LocaleProvider";
+import { useAccount } from "./AccountProvider";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 type Cat = { id: string; slug: string; name: string };
@@ -12,6 +13,7 @@ type Cat = { id: string; slug: string; name: string };
 export default function Header({ siteName, categories }: { siteName: string; categories: Cat[] }) {
   const { count, setOpen } = useCart();
   const { t } = useI18n();
+  const { name, favorites } = useAccount();
   const router = useRouter();
   const [scrolled, setScrolled] = useState(false);
   const [menu, setMenu] = useState(false);
@@ -48,20 +50,26 @@ export default function Header({ siteName, categories }: { siteName: string; cat
         scrolled ? "border-b border-line bg-background/85 py-3 backdrop-blur-xl" : "bg-transparent py-5"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5">
+      <div className="mx-auto flex max-w-[90rem] items-center justify-between gap-4 px-5 md:grid md:grid-cols-[1fr_auto_1fr]">
         <button className="text-2xl md:hidden" aria-label={t("nav.menu")} onClick={() => setMenu((m) => !m)}>
           {menu ? "×" : "☰"}
         </button>
-        <nav className="hidden items-center gap-9 text-xs font-medium uppercase tracking-[0.2em] md:flex">{nav}</nav>
+        <nav className="hidden items-center gap-5 whitespace-nowrap text-[0.7rem] font-medium uppercase tracking-[0.18em] md:flex lg:gap-8 lg:text-xs lg:tracking-[0.2em]">{nav}</nav>
         <Link
           href="/"
-          className="gold-text font-display text-2xl font-semibold uppercase tracking-[0.25em] md:absolute md:left-1/2 md:-translate-x-1/2"
+          className="gold-text whitespace-nowrap font-display text-xl font-semibold uppercase tracking-[0.2em] lg:text-2xl lg:tracking-[0.25em]"
           dir="ltr"
         >
           {siteName}
         </Link>
-        <div className="flex items-center gap-4 text-xs uppercase tracking-[0.2em]">
+        <div className="flex items-center gap-3 whitespace-nowrap text-[0.7rem] uppercase tracking-[0.18em] md:justify-self-end lg:gap-4 lg:text-xs lg:tracking-[0.2em]">
           <LanguageSwitcher className="hidden sm:flex" />
+          <Link href={name ? "/account" : "/login"} className="hidden hover:text-gold sm:block">
+            {name ? t("nav.account") : t("nav.signIn")}
+          </Link>
+          <Link href="/account/favorites" aria-label={t("nav.favorites")} title={t("nav.favorites")} className="relative hover:text-gold">
+            <svg viewBox="0 0 24 24" className={`size-5 ${favorites.length ? "fill-gold stroke-gold" : "fill-none stroke-current"}`} strokeWidth="1.8"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 2.9 4.8 6.4 4.8c2 0 3.6 1.1 5.6 3.2 2-2.1 3.6-3.2 5.6-3.2 3.5 0 5.5 3.6 4 7C19.5 16.4 12 21 12 21z" strokeLinejoin="round" /></svg>
+          </Link>
           <button onClick={() => setSearch((s) => !s)} aria-label={t("nav.search")} className="hover:text-gold">{t("nav.search")}</button>
           <button onClick={() => setOpen(true)} className="relative hover:text-gold">
             {t("nav.cart")}
@@ -104,6 +112,7 @@ export default function Header({ siteName, categories }: { siteName: string; cat
           >
             <div className="flex flex-col gap-5 px-5 py-6 text-sm uppercase tracking-[0.2em]">
               {nav}
+              <Link href={name ? "/account" : "/login"} onClick={() => setMenu(false)}>{name ? t("nav.account") : t("nav.signIn")}</Link>
               <LanguageSwitcher />
             </div>
           </motion.nav>

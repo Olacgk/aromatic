@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Pencil, Plus, Trash2 } from "lucide-react";
-import { readDB } from "@/lib/db";
+import { readAdminDB } from "@/lib/admin-data";
 import { formatPrice } from "@/lib/format";
 import { deleteProduct } from "../actions";
 import ConfirmButton from "@/components/admin/ConfirmButton";
@@ -10,7 +10,7 @@ import {
 import { cn } from "@/lib/utils";
 
 export default async function AdminProducts() {
-  const { products, categories } = await readDB();
+  const { products, categories } = await readAdminDB(["products", "categories"]);
   const catName = (s: string) => categories.find((c) => c.slug === s)?.name ?? s;
   return (
     <>
@@ -59,7 +59,7 @@ export default async function AdminProducts() {
                         <Pencil />
                       </LinkButton>
                       <form action={deleteProduct}>
-                        <input type="hidden" name="id" value={p.id} />
+                        <input type="hidden" name="slug" value={p.slug} />
                         <ConfirmButton
                           message={`Supprimer « ${p.name} » ? Cette action est définitive.`}
                           aria-label="Supprimer"

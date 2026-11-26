@@ -88,6 +88,7 @@ const rawSeed: DB = {
       image: files["cat-body-fragrance-oils"] ?? "", image2: undefined,
     },
   ],
+  customers: [],
   orders: [
     {
       id: "ORD-1001", createdAt: "2026-11-20T10:00:00.000Z",

@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Product } from "@/lib/types";
 import { productFrom } from "@/lib/format";
 import { getI18n } from "@/lib/i18n/server";
+import FavoriteButton from "./FavoriteButton";
 import ProductImage from "./ProductImage";
 
 export default async function ProductCard({ p }: { p: Product }) {
@@ -9,7 +10,8 @@ export default async function ProductCard({ p }: { p: Product }) {
   const from = productFrom(p);
   const discount = p.comparePrice ? Math.round((1 - p.price / p.comparePrice) * 100) : 0;
   return (
-    <Link href={`/products/${p.slug}`} className="group block">
+    <div className="group relative">
+    <Link href={`/products/${p.slug}`} className="block">
       <div className="relative aspect-[4/5] overflow-hidden bg-card">
         <ProductImage
           src={p.image}
@@ -43,5 +45,7 @@ export default async function ProductCard({ p }: { p: Product }) {
         {p.colors.length > 0 && <p className="mt-1 text-xs text-foreground/40">{p.colors.join(" · ")}</p>}
       </div>
     </Link>
+    <FavoriteButton productId={p.id} className="absolute end-3 top-3 z-10" />
+    </div>
   );
 }

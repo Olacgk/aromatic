@@ -1,6 +1,7 @@
+import Flash from "@/components/admin/Flash";
 import Image from "next/image";
 import { Trash2 } from "lucide-react";
-import { readDB } from "@/lib/db";
+import { readAdminDB } from "@/lib/admin-data";
 import { deleteCategory, saveCategory } from "../actions";
 import ConfirmButton from "@/components/admin/ConfirmButton";
 import { Badge, Button, Card, CardContent, CardDescription, CardHeader, CardTitle, PageHeader, buttonVariants } from "@/components/admin/ui";
@@ -22,10 +23,12 @@ function Fields({ c }: { c?: Category }) {
   );
 }
 
-export default async function AdminCategories() {
-  const { categories, products } = await readDB();
+export default async function AdminCategories({ searchParams }: { searchParams: Promise<{ error?: string }> }) {
+  const { error } = await searchParams;
+  const { categories, products } = await readAdminDB(["categories", "products"]);
   return (
     <>
+      <Flash error={error} />
       <PageHeader title="Catégories" description="Organisez le catalogue en collections." />
       <div className="grid gap-4 xl:grid-cols-2">
         {categories.map((c) => {
@@ -46,14 +49,14 @@ export default async function AdminCategories() {
               </CardHeader>
               <CardContent>
                 <form action={saveCategory} className="grid gap-3 sm:grid-cols-2">
-                  <input type="hidden" name="id" value={c.id} />
+                  <input type="hidden" name="origSlug" value={c.slug} />
                   <Fields c={c} />
                   <div className="flex items-center gap-2 sm:col-span-2">
                     <Button size="sm">Enregistrer</Button>
                   </div>
                 </form>
                 <form action={deleteCategory} className="mt-3 border-t pt-3">
-                  <input type="hidden" name="id" value={c.id} />
+                  <input type="hidden" name="slug" value={c.slug} />
                   <ConfirmButton
                     message={`Supprimer la catégorie « ${c.name} » ?`}
                     disabled={used > 0}
@@ -71,7 +74,7 @@ export default async function AdminCategories() {
           <CardHeader><CardTitle>Nouvelle catégorie</CardTitle></CardHeader>
           <CardContent>
             <form action={saveCategory} className="grid gap-3 sm:grid-cols-2">
-              <input type="hidden" name="id" value="" />
+              <input type="hidden" name="origSlug" value="" />
               <Fields />
               <div className="sm:col-span-2"><Button size="sm">Ajouter</Button></div>
             </form>

@@ -25,7 +25,8 @@ type Ctx = {
 };
 
 const CartCtx = createContext<Ctx | null>(null);
-const STORAGE = "aromatic-cart";
+// v2: product ids became numeric with the Django API, carts saved with the old ids are dropped.
+const STORAGE = "aromatic-cart-v2";
 
 export function CartProvider({ children }: { children: ReactNode }) {
   const [lines, setLines] = useState<CartLine[]>([]);

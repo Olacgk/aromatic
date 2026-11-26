@@ -43,11 +43,45 @@ export type OrderItem = {
 
 export type Order = {
   id: string;
+  customerId?: string;
   createdAt: string;
   customer: { name: string; email: string; phone: string; address: string };
   items: OrderItem[];
   total: number;
   status: OrderStatus;
+};
+
+export type Customer = {
+  id: string;
+  name: string;
+  email: string;
+  phone?: string;
+  address?: string;
+  hasPassword: boolean;
+  hasGoogle: boolean;
+  avatar?: string;
+  favorites: string[];
+  blocked: boolean;
+  createdAt: string;
+  lastLoginAt?: string;
+  /** Only filled by the admin API. */
+  ordersCount?: number;
+  totalSpent?: number;
+};
+
+export type PaymentMethod = { code: "wave" | "orange_money" | "card" | "mock"; label: string };
+
+export type PaymentStatus = "pending" | "succeeded" | "failed" | "cancelled" | "expired";
+
+export type Payment = {
+  id: string;
+  order: string;
+  orderStatus: OrderStatus;
+  provider: PaymentMethod["code"];
+  amount: number;
+  status: PaymentStatus;
+  checkoutUrl: string;
+  createdAt: string;
 };
 
 export type PageDoc = { slug: string; title: string; content: string; tr?: Tr<{ title: string; content: string }> };
@@ -67,5 +101,6 @@ export type DB = {
   categories: Category[];
   products: Product[];
   orders: Order[];
+  customers: Customer[];
   pages: PageDoc[];
 };

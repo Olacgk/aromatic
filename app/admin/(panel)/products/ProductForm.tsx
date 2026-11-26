@@ -7,6 +7,7 @@ export default function ProductForm({ product, categories }: { product?: Product
   return (
     <form action={saveProduct} className="grid gap-4 xl:grid-cols-3">
       <input type="hidden" name="id" defaultValue={product?.id ?? ""} />
+      <input type="hidden" name="origSlug" defaultValue={product?.slug ?? ""} />
 
       <div className="grid gap-4 xl:col-span-2">
         <FormSection title="Informations générales" description="Nom, catégorie et description affichés sur la boutique.">
@@ -81,10 +82,13 @@ export default function ProductForm({ product, categories }: { product?: Product
           <div>
             <label className="label">Image principale</label>
             <input name="image" defaultValue={product?.image} placeholder="/img/… ou https://…" className="input" />
+            <input name="image_file" type="file" accept="image/*" className="input mt-2 py-1.5 text-xs" />
+            <p className="mt-1 text-xs text-muted-foreground">Un fichier envoyé remplace le lien ci-dessus.</p>
           </div>
           <div>
             <label className="label">Image au survol</label>
             <input name="image2" defaultValue={product?.image2} className="input" />
+            <input name="image2_file" type="file" accept="image/*" className="input mt-2 py-1.5 text-xs" />
           </div>
           {product?.image && (
             // eslint-disable-next-line @next/next/no-img-element

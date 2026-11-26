@@ -9,7 +9,9 @@ const FILE = path.join(process.cwd(), "data", "db.json");
 export async function readDB(): Promise<DB> {
   try {
     // Older db.json files get the default fr/ar translations filled in (never overwritten).
-    return withTranslations(JSON.parse(await fs.readFile(FILE, "utf8")) as DB);
+    const db = withTranslations(JSON.parse(await fs.readFile(FILE, "utf8")) as DB);
+    db.customers ??= [];
+    return db;
   } catch {
     await writeDB(seed);
     return structuredClone(seed);

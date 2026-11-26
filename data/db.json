@@ -22,6 +22,18 @@
       "instagram": "#",
       "youtube": "#",
       "twitter": "#"
+    },
+    "tr": {
+      "fr": {
+        "about": "Aromatic est une marque saoudienne de référence, spécialisée dans les appareils de parfumage modernes, les huiles essentielles innovantes et les parfums de luxe. Fondée en 2017 à Riyad.",
+        "promoText": "Soldes d'été, remise de",
+        "newsletterTitle": "Obtenez 15 % de réduction sur votre première commande"
+      },
+      "ar": {
+        "about": "أروماتيك علامة سعودية رائدة متخصصة في أجهزة التعطير الحديثة والزيوت العطرية المبتكرة والعطور الفاخرة. تأسست عام 2017 في الرياض.",
+        "promoText": "تخفيضات الصيف، خصم",
+        "newsletterTitle": "احصل على خصم 15% على طلبك الأول"
+      }
     }
   },
   "categories": [
@@ -30,28 +42,68 @@
       "slug": "aroma-diffuser",
       "name": "Aroma Diffusers",
       "image": "/img/cat-aroma-diffuser.png",
-      "description": "Modern scent diffusion devices for home, office and hotels."
+      "description": "Modern scent diffusion devices for home, office and hotels.",
+      "tr": {
+        "fr": {
+          "name": "Diffuseurs d'arômes",
+          "description": "Appareils de diffusion modernes pour la maison, le bureau et l'hôtel."
+        },
+        "ar": {
+          "name": "أجهزة التعطير",
+          "description": "أجهزة نشر عطري حديثة للمنزل والمكتب والفنادق."
+        }
+      }
     },
     {
       "id": "c2",
       "slug": "aromatic-oils",
       "name": "Diffuser Fragrance Oils",
       "image": "/img/cat-aromatic-oils.jpg",
-      "description": "Concentrated fragrance oils for every diffuser."
+      "description": "Concentrated fragrance oils for every diffuser.",
+      "tr": {
+        "fr": {
+          "name": "Huiles parfumées pour diffuseurs",
+          "description": "Huiles parfumées concentrées pour tous les diffuseurs."
+        },
+        "ar": {
+          "name": "زيوت عطرية للأجهزة",
+          "description": "زيوت عطرية مركّزة لجميع الأجهزة."
+        }
+      }
     },
     {
       "id": "c3",
       "slug": "luxury-perfumes",
       "name": "Luxury Perfumes",
       "image": "/img/cat-luxury-perfumes.png",
-      "description": "Signature luxury perfumes."
+      "description": "Signature luxury perfumes.",
+      "tr": {
+        "fr": {
+          "name": "Parfums de luxe",
+          "description": "Parfums de luxe signature."
+        },
+        "ar": {
+          "name": "عطور فاخرة",
+          "description": "عطور فاخرة بتوقيعنا."
+        }
+      }
     },
     {
       "id": "c4",
       "slug": "body-fragrance-oils",
       "name": "Body Fragrance Oils",
       "image": "/img/cat-body-fragrance-oils.jpg",
-      "description": "Alcohol-free body fragrance oils."
+      "description": "Alcohol-free body fragrance oils.",
+      "tr": {
+        "fr": {
+          "name": "Huiles parfumées pour le corps",
+          "description": "Huiles parfumées pour le corps, sans alcool."
+        },
+        "ar": {
+          "name": "زيوت عطرية للجسم",
+          "description": "زيوت عطرية للجسم خالية من الكحول."
+        }
+      }
     }
   ],
   "products": [
@@ -72,7 +124,15 @@
       "description": "Compact aroma diffuser covering up to 60 m³.",
       "stock": 25,
       "featured": true,
-      "published": true
+      "published": true,
+      "tr": {
+        "fr": {
+          "description": "Diffuseur d'arômes compact couvrant jusqu'à 60 m³."
+        },
+        "ar": {
+          "description": "جهاز تعطير صغير يغطي حتى 60 م³."
+        }
+      }
     },
     {
       "id": "dif-af90",
@@ -91,7 +151,15 @@
       "description": "Quiet diffuser covering up to 90 m³.",
       "stock": 25,
       "featured": true,
-      "published": true
+      "published": true,
+      "tr": {
+        "fr": {
+          "description": "Diffuseur silencieux couvrant jusqu'à 90 m³."
+        },
+        "ar": {
+          "description": "جهاز تعطير هادئ يغطي حتى 90 م³."
+        }
+      }
     },
     {
       "id": "dif-af200",
@@ -109,7 +177,15 @@
       "description": "Powerful diffuser covering up to 200 m³.",
       "stock": 25,
       "featured": true,
-      "published": true
+      "published": true,
+      "tr": {
+        "fr": {
+          "description": "Diffuseur puissant couvrant jusqu'à 200 m³."
+        },
+        "ar": {
+          "description": "جهاز تعطير قوي يغطي حتى 200 م³."
+        }
+      }
     },
     {
       "id": "dif-hotel-experience-bundle",
@@ -124,7 +200,15 @@
       "description": "Diffuser plus oils to recreate a luxury hotel scent.",
       "stock": 25,
       "featured": true,
-      "published": true
+      "published": true,
+      "tr": {
+        "fr": {
+          "description": "Diffuseur et huiles pour recréer le parfum d'un hôtel de luxe."
+        },
+        "ar": {
+          "description": "جهاز تعطير مع زيوت لتعيش أجواء الفنادق الفاخرة."
+        }
+      }
     },
     {
       "id": "dif-af300-wall-diffuser",
@@ -140,7 +224,15 @@
       "description": "Wall-mounted diffuser for medium spaces.",
       "stock": 25,
       "featured": true,
-      "published": true
+      "published": true,
+      "tr": {
+        "fr": {
+          "description": "Diffuseur mural pour les espaces moyens."
+        },
+        "ar": {
+          "description": "جهاز تعطير جداري للمساحات المتوسطة."
+        }
+      }
     },
     {
       "id": "dif-af3000-pro",
@@ -156,7 +248,15 @@
       "description": "Professional diffuser for large commercial spaces.",
       "stock": 25,
       "featured": true,
-      "published": true
+      "published": true,
+      "tr": {
+        "fr": {
+          "description": "Diffuseur professionnel pour les grands espaces commerciaux."
+        },
+        "ar": {
+          "description": "جهاز تعطير احترافي للمساحات التجارية الكبيرة."
+        }
+      }
     },
     {
       "id": "dif-af300-smart",
@@ -172,7 +272,15 @@
       "description": "Wi-Fi diffuser controlled from your phone.",
       "stock": 25,
       "featured": true,
-      "published": true
+      "published": true,
+      "tr": {
+        "fr": {
+          "description": "Diffuseur Wi-Fi piloté depuis votre téléphone."
+        },
+        "ar": {
+          "description": "جهاز تعطير بالواي فاي يُتحكم به من هاتفك."
+        }
+      }
     },
     {
       "id": "oil-bloom",
@@ -203,7 +311,15 @@
       "description": "Fresh floral notes.",
       "stock": 100,
       "featured": true,
-      "published": true
+      "published": true,
+      "tr": {
+        "fr": {
+          "description": "Notes florales fraîches."
+        },
+        "ar": {
+          "description": "نفحات زهرية منعشة."
+        }
+      }
     },
     {
       "id": "oil-amber",
@@ -234,7 +350,15 @@
       "description": "Warm amber and vanilla.",
       "stock": 100,
       "featured": true,
-      "published": true
+      "published": true,
+      "tr": {
+        "fr": {
+          "description": "Ambre chaud et vanille."
+        },
+        "ar": {
+          "description": "عنبر دافئ وفانيليا."
+        }
+      }
     },
     {
       "id": "oil-royal-oud",
@@ -265,7 +389,15 @@
       "description": "Deep, rich oud.",
       "stock": 100,
       "featured": true,
-      "published": true
+      "published": true,
+      "tr": {
+        "fr": {
+          "description": "Oud profond et riche."
+        },
+        "ar": {
+          "description": "عود عميق وغني."
+        }
+      }
     },
     {
       "id": "oil-active",
@@ -296,7 +428,15 @@
       "description": "Energizing citrus and mint.",
       "stock": 100,
       "featured": true,
-      "published": true
+      "published": true,
+      "tr": {
+        "fr": {
+          "description": "Agrumes et menthe énergisants."
+        },
+        "ar": {
+          "description": "حمضيات ونعناع منشّط."
+        }
+      }
     },
     {
       "id": "oil-harmony",
@@ -327,7 +467,15 @@
       "description": "Balanced woody-musk blend.",
       "stock": 100,
       "featured": true,
-      "published": true
+      "published": true,
+      "tr": {
+        "fr": {
+          "description": "Mélange équilibré boisé et musqué."
+        },
+        "ar": {
+          "description": "مزيج متوازن من الخشب والمسك."
+        }
+      }
     },
     {
       "id": "oil-elegant",
@@ -358,7 +506,15 @@
       "description": "Soft powdery elegance.",
       "stock": 100,
       "featured": true,
-      "published": true
+      "published": true,
+      "tr": {
+        "fr": {
+          "description": "Élégance poudrée et douce."
+        },
+        "ar": {
+          "description": "أناقة بودرية ناعمة."
+        }
+      }
     },
     {
       "id": "oil-attraction",
@@ -389,7 +545,15 @@
       "description": "A magnetic, sensual signature.",
       "stock": 100,
       "featured": true,
-      "published": true
+      "published": true,
+      "tr": {
+        "fr": {
+          "description": "Une signature magnétique et sensuelle."
+        },
+        "ar": {
+          "description": "توقيع عطري جذاب وحسي."
+        }
+      }
     },
     {
       "id": "perf-ghost",
@@ -404,7 +568,15 @@
       "description": "Mysterious woody fragrance.",
       "stock": 40,
       "featured": true,
-      "published": true
+      "published": true,
+      "tr": {
+        "fr": {
+          "description": "Parfum boisé et mystérieux."
+        },
+        "ar": {
+          "description": "عطر خشبي غامض."
+        }
+      }
     },
     {
       "id": "perf-noir",
@@ -419,7 +591,15 @@
       "description": "Dark, intense and refined.",
       "stock": 40,
       "featured": true,
-      "published": true
+      "published": true,
+      "tr": {
+        "fr": {
+          "description": "Sombre, intense et raffiné."
+        },
+        "ar": {
+          "description": "داكن ومكثّف وراقٍ."
+        }
+      }
     },
     {
       "id": "perf-oud",
@@ -434,7 +614,15 @@
       "description": "Classic Arabian oud.",
       "stock": 40,
       "featured": true,
-      "published": true
+      "published": true,
+      "tr": {
+        "fr": {
+          "description": "L'oud arabe classique."
+        },
+        "ar": {
+          "description": "العود العربي الكلاسيكي."
+        }
+      }
     },
     {
       "id": "perf-amber",
@@ -449,7 +637,15 @@
       "description": "Warm amber perfume.",
       "stock": 40,
       "featured": true,
-      "published": true
+      "published": true,
+      "tr": {
+        "fr": {
+          "description": "Parfum chaleureux à l'ambre."
+        },
+        "ar": {
+          "description": "عطر دافئ بالعنبر."
+        }
+      }
     },
     {
       "id": "perf-floral",
@@ -464,7 +660,15 @@
       "description": "Bouquet of white flowers.",
       "stock": 40,
       "featured": true,
-      "published": true
+      "published": true,
+      "tr": {
+        "fr": {
+          "description": "Bouquet de fleurs blanches."
+        },
+        "ar": {
+          "description": "باقة من الزهور البيضاء."
+        }
+      }
     },
     {
       "id": "perf-grey",
@@ -479,7 +683,15 @@
       "description": "Smoky and modern.",
       "stock": 40,
       "featured": true,
-      "published": true
+      "published": true,
+      "tr": {
+        "fr": {
+          "description": "Fumé et moderne."
+        },
+        "ar": {
+          "description": "دخاني وعصري."
+        }
+      }
     },
     {
       "id": "perf-opal",
@@ -494,7 +706,15 @@
       "description": "Luminous musky floral.",
       "stock": 40,
       "featured": true,
-      "published": true
+      "published": true,
+      "tr": {
+        "fr": {
+          "description": "Floral musqué lumineux."
+        },
+        "ar": {
+          "description": "زهري مسكي مشرق."
+        }
+      }
     },
     {
       "id": "perf-elixir",
@@ -509,7 +729,15 @@
       "description": "Golden, opulent and warm.",
       "stock": 40,
       "featured": true,
-      "published": true
+      "published": true,
+      "tr": {
+        "fr": {
+          "description": "Doré, opulent et chaleureux."
+        },
+        "ar": {
+          "description": "ذهبي فاخر ودافئ."
+        }
+      }
     },
     {
       "id": "perf-patchouli",
@@ -524,7 +752,15 @@
       "description": "Earthy patchouli with a sweet trail.",
       "stock": 40,
       "featured": true,
-      "published": true
+      "published": true,
+      "tr": {
+        "fr": {
+          "description": "Patchouli terreux et sillage sucré."
+        },
+        "ar": {
+          "description": "باتشولي ترابي بأثر حلو."
+        }
+      }
     },
     {
       "id": "perf-black",
@@ -539,7 +775,15 @@
       "description": "Deep, dark and magnetic.",
       "stock": 40,
       "featured": true,
-      "published": true
+      "published": true,
+      "tr": {
+        "fr": {
+          "description": "Profond, sombre et magnétique."
+        },
+        "ar": {
+          "description": "عميق وداكن وجذاب."
+        }
+      }
     },
     {
       "id": "perf-aura",
@@ -554,7 +798,15 @@
       "description": "Light, airy and radiant.",
       "stock": 40,
       "featured": true,
-      "published": true
+      "published": true,
+      "tr": {
+        "fr": {
+          "description": "Léger, aérien et radieux."
+        },
+        "ar": {
+          "description": "خفيف وهوائي ومشرق."
+        }
+      }
     },
     {
       "id": "body-musk",
@@ -568,7 +820,15 @@
       "description": "Alcohol-free body oil.",
       "stock": 40,
       "featured": true,
-      "published": true
+      "published": true,
+      "tr": {
+        "fr": {
+          "description": "Huile corporelle sans alcool."
+        },
+        "ar": {
+          "description": "زيت للجسم خالٍ من الكحول."
+        }
+      }
     },
     {
       "id": "body-rose",
@@ -582,7 +842,15 @@
       "description": "Soft rose body oil.",
       "stock": 40,
       "featured": true,
-      "published": true
+      "published": true,
+      "tr": {
+        "fr": {
+          "description": "Huile corporelle douce à la rose."
+        },
+        "ar": {
+          "description": "زيت جسم بالورد الناعم."
+        }
+      }
     }
   ],
   "orders": [
@@ -612,17 +880,48 @@
     {
       "slug": "privacy-policy",
       "title": "Privacy Policy",
-      "content": "We respect your privacy and only use your data to process orders."
+      "content": "We respect your privacy and only use your data to process orders.",
+      "tr": {
+        "fr": {
+          "title": "Politique de confidentialité",
+          "content": "Nous respectons votre vie privée et n'utilisons vos données que pour traiter vos commandes."
+        },
+        "ar": {
+          "title": "سياسة الخصوصية",
+          "content": "نحترم خصوصيتك ولا نستخدم بياناتك إلا لمعالجة طلباتك."
+        }
+      }
     },
     {
       "slug": "delivery-returns",
       "title": "Exchange & Return Policy",
-      "content": "Unopened items can be returned within 7 days of delivery."
+      "content": "Unopened items can be returned within 7 days of delivery.",
+      "tr": {
+        "fr": {
+          "title": "Politique d'échange et de retour",
+          "content": "Les articles non ouverts peuvent être retournés dans les 7 jours suivant la livraison."
+        },
+        "ar": {
+          "title": "سياسة الاستبدال والإرجاع",
+          "content": "يمكن إرجاع المنتجات غير المفتوحة خلال 7 أيام من التسليم."
+        }
+      }
     },
     {
       "slug": "terms-conditions",
       "title": "Terms and Conditions",
-      "content": "By using this site you agree to our terms of sale."
+      "content": "By using this site you agree to our terms of sale.",
+      "tr": {
+        "fr": {
+          "title": "Conditions générales",
+          "content": "En utilisant ce site, vous acceptez nos conditions générales de vente."
+        },
+        "ar": {
+          "title": "الشروط والأحكام",
+          "content": "باستخدامك هذا الموقع فإنك توافق على شروط البيع الخاصة بنا."
+        }
+      }
     }
-  ]
+  ],
+  "customers": []
 }

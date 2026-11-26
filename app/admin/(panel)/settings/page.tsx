@@ -1,4 +1,5 @@
-import { readDB } from "@/lib/db";
+import Flash from "@/components/admin/Flash";
+import { readAdminDB } from "@/lib/admin-data";
 import { saveSettings } from "../actions";
 import { Button, FormSection, PageHeader } from "@/components/admin/ui";
 import TrFields from "@/components/admin/TrFields";
@@ -12,10 +13,12 @@ function Field({ label, name, value }: { label: string; name: string; value: str
   );
 }
 
-export default async function AdminSettings() {
-  const { settings: s } = await readDB();
+export default async function AdminSettings({ searchParams }: { searchParams: Promise<{ error?: string }> }) {
+  const { error } = await searchParams;
+  const { settings: s } = await readAdminDB(["settings"]);
   return (
     <>
+      <Flash error={error} />
       <PageHeader title="Paramètres" description="Identité, bandeau promotionnel, contact et réseaux sociaux." />
       <form action={saveSettings} className="grid gap-4 xl:grid-cols-2">
         <FormSection title="Général">
