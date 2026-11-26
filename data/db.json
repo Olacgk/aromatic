@@ -1,0 +1,628 @@
+{
+  "settings": {
+    "siteName": "Aromatic Africa",
+    "promo": {
+      "enabled": false,
+      "text": "Summer sale discount off",
+      "discount": "50%",
+      "link": "/collections/sale"
+    },
+    "about": "Aromatic is a leading Saudi brand specializing in modern fragrance devices, innovative essential oils, and luxury perfume products. Founded in 2017 in Riyadh.",
+    "contact": {
+      "email": "care@aromatic.africa",
+      "phone": "+221779066413",
+      "whatsapp": "https://wa.me/221779066413"
+    },
+    "newsletter": {
+      "title": "Get 15% off for your first order",
+      "code": "CODE15OFF"
+    },
+    "social": {
+      "facebook": "#",
+      "instagram": "#",
+      "youtube": "#",
+      "twitter": "#"
+    }
+  },
+  "categories": [
+    {
+      "id": "c1",
+      "slug": "aroma-diffuser",
+      "name": "Aroma Diffusers",
+      "image": "/img/cat-aroma-diffuser.png",
+      "description": "Modern scent diffusion devices for home, office and hotels."
+    },
+    {
+      "id": "c2",
+      "slug": "aromatic-oils",
+      "name": "Diffuser Fragrance Oils",
+      "image": "/img/cat-aromatic-oils.jpg",
+      "description": "Concentrated fragrance oils for every diffuser."
+    },
+    {
+      "id": "c3",
+      "slug": "luxury-perfumes",
+      "name": "Luxury Perfumes",
+      "image": "/img/cat-luxury-perfumes.png",
+      "description": "Signature luxury perfumes."
+    },
+    {
+      "id": "c4",
+      "slug": "body-fragrance-oils",
+      "name": "Body Fragrance Oils",
+      "image": "/img/cat-body-fragrance-oils.jpg",
+      "description": "Alcohol-free body fragrance oils."
+    }
+  ],
+  "products": [
+    {
+      "id": "dif-af60",
+      "image": "/img/dif-af60-1.jpg",
+      "image2": "/img/dif-af60-2.jpg",
+      "slug": "af60",
+      "name": "AF60",
+      "categorySlug": "aroma-diffuser",
+      "price": 45000,
+      "variants": [],
+      "colors": [
+        "Black",
+        "White",
+        "Pink"
+      ],
+      "description": "Compact aroma diffuser covering up to 60 m³.",
+      "stock": 25,
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "dif-af90",
+      "image": "/img/dif-af90-1.jpg",
+      "image2": "/img/dif-af90-2.jpg",
+      "slug": "af90",
+      "name": "AF90",
+      "categorySlug": "aroma-diffuser",
+      "price": 43500,
+      "comparePrice": 50000,
+      "variants": [],
+      "colors": [
+        "Black",
+        "White"
+      ],
+      "description": "Quiet diffuser covering up to 90 m³.",
+      "stock": 25,
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "dif-af200",
+      "image": "/img/dif-af200-1.jpg",
+      "image2": "/img/dif-af200-2.jpg",
+      "slug": "af200",
+      "name": "AF200",
+      "categorySlug": "aroma-diffuser",
+      "price": 55000,
+      "variants": [],
+      "colors": [
+        "Black",
+        "White"
+      ],
+      "description": "Powerful diffuser covering up to 200 m³.",
+      "stock": 25,
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "dif-hotel-experience-bundle",
+      "image": "/img/dif-hotel-experience-bundle-1.png",
+      "image2": "/img/dif-hotel-experience-bundle-2.jpg",
+      "slug": "hotel-experience-bundle",
+      "name": "Hotel Experience Bundle",
+      "categorySlug": "aroma-diffuser",
+      "price": 55000,
+      "variants": [],
+      "colors": [],
+      "description": "Diffuser plus oils to recreate a luxury hotel scent.",
+      "stock": 25,
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "dif-af300-wall-diffuser",
+      "image": "/img/dif-af300-wall-diffuser-1.jpg",
+      "image2": "/img/dif-af300-wall-diffuser-2.jpg",
+      "slug": "af300-wall-diffuser",
+      "name": "AF300 Wall Diffuser",
+      "categorySlug": "aroma-diffuser",
+      "price": 67500,
+      "comparePrice": 75000,
+      "variants": [],
+      "colors": [],
+      "description": "Wall-mounted diffuser for medium spaces.",
+      "stock": 25,
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "dif-af3000-pro",
+      "image": "/img/dif-af3000-pro-1.jpg",
+      "image2": "/img/dif-af3000-pro-2.jpg",
+      "slug": "af3000-pro",
+      "name": "AF3000 Pro",
+      "categorySlug": "aroma-diffuser",
+      "price": 249000,
+      "comparePrice": 350000,
+      "variants": [],
+      "colors": [],
+      "description": "Professional diffuser for large commercial spaces.",
+      "stock": 25,
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "dif-af300-smart",
+      "image": "/img/dif-af300-smart-1.jpg",
+      "image2": "/img/dif-af300-smart-2.jpg",
+      "slug": "af300-smart",
+      "name": "AF300 Smart",
+      "categorySlug": "aroma-diffuser",
+      "price": 67500,
+      "comparePrice": 75000,
+      "variants": [],
+      "colors": [],
+      "description": "Wi-Fi diffuser controlled from your phone.",
+      "stock": 25,
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "oil-bloom",
+      "image": "/img/oil-bloom-1.jpg",
+      "slug": "bloom-diffuser-oil",
+      "name": "Bloom",
+      "categorySlug": "aromatic-oils",
+      "price": 5000,
+      "variants": [
+        {
+          "label": "10GM",
+          "price": 5000
+        },
+        {
+          "label": "100GM",
+          "price": 38000
+        },
+        {
+          "label": "500GM",
+          "price": 120000
+        },
+        {
+          "label": "1000GM",
+          "price": 220000
+        }
+      ],
+      "colors": [],
+      "description": "Fresh floral notes.",
+      "stock": 100,
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "oil-amber",
+      "image": "/img/oil-amber-1.jpg",
+      "slug": "amber-diffuser-oil",
+      "name": "Amber",
+      "categorySlug": "aromatic-oils",
+      "price": 5000,
+      "variants": [
+        {
+          "label": "10GM",
+          "price": 5000
+        },
+        {
+          "label": "100GM",
+          "price": 38000
+        },
+        {
+          "label": "500GM",
+          "price": 120000
+        },
+        {
+          "label": "1000GM",
+          "price": 220000
+        }
+      ],
+      "colors": [],
+      "description": "Warm amber and vanilla.",
+      "stock": 100,
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "oil-royal-oud",
+      "image": "/img/oil-royal-oud-1.jpg",
+      "slug": "royal-oud-diffuser-oil",
+      "name": "Royal Oud",
+      "categorySlug": "aromatic-oils",
+      "price": 5000,
+      "variants": [
+        {
+          "label": "10GM",
+          "price": 5000
+        },
+        {
+          "label": "100GM",
+          "price": 38000
+        },
+        {
+          "label": "500GM",
+          "price": 120000
+        },
+        {
+          "label": "1000GM",
+          "price": 220000
+        }
+      ],
+      "colors": [],
+      "description": "Deep, rich oud.",
+      "stock": 100,
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "oil-active",
+      "image": "/img/oil-active-1.jpg",
+      "slug": "active-diffuser-oil",
+      "name": "Active",
+      "categorySlug": "aromatic-oils",
+      "price": 5000,
+      "variants": [
+        {
+          "label": "10GM",
+          "price": 5000
+        },
+        {
+          "label": "100GM",
+          "price": 38000
+        },
+        {
+          "label": "500GM",
+          "price": 120000
+        },
+        {
+          "label": "1000GM",
+          "price": 220000
+        }
+      ],
+      "colors": [],
+      "description": "Energizing citrus and mint.",
+      "stock": 100,
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "oil-harmony",
+      "image": "/img/oil-harmony-1.jpg",
+      "slug": "harmony-diffuser-oil",
+      "name": "Harmony",
+      "categorySlug": "aromatic-oils",
+      "price": 5000,
+      "variants": [
+        {
+          "label": "10GM",
+          "price": 5000
+        },
+        {
+          "label": "100GM",
+          "price": 38000
+        },
+        {
+          "label": "500GM",
+          "price": 120000
+        },
+        {
+          "label": "1000GM",
+          "price": 220000
+        }
+      ],
+      "colors": [],
+      "description": "Balanced woody-musk blend.",
+      "stock": 100,
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "oil-elegant",
+      "image": "/img/oil-elegant-1.jpg",
+      "slug": "elegant-diffuser-oil",
+      "name": "Elegant",
+      "categorySlug": "aromatic-oils",
+      "price": 5000,
+      "variants": [
+        {
+          "label": "10GM",
+          "price": 5000
+        },
+        {
+          "label": "100GM",
+          "price": 38000
+        },
+        {
+          "label": "500GM",
+          "price": 120000
+        },
+        {
+          "label": "1000GM",
+          "price": 220000
+        }
+      ],
+      "colors": [],
+      "description": "Soft powdery elegance.",
+      "stock": 100,
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "oil-attraction",
+      "image": "/img/oil-attraction-1.jpg",
+      "slug": "attraction-diffuser-oil",
+      "name": "Attraction",
+      "categorySlug": "aromatic-oils",
+      "price": 5000,
+      "variants": [
+        {
+          "label": "10GM",
+          "price": 5000
+        },
+        {
+          "label": "100GM",
+          "price": 38000
+        },
+        {
+          "label": "500GM",
+          "price": 120000
+        },
+        {
+          "label": "1000GM",
+          "price": 220000
+        }
+      ],
+      "colors": [],
+      "description": "A magnetic, sensual signature.",
+      "stock": 100,
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "perf-ghost",
+      "image": "/img/perf-ghost-1.jpg",
+      "image2": "/img/perf-ghost-2.jpg",
+      "slug": "ghost-perfume",
+      "name": "Ghost",
+      "categorySlug": "luxury-perfumes",
+      "price": 67500,
+      "variants": [],
+      "colors": [],
+      "description": "Mysterious woody fragrance.",
+      "stock": 40,
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "perf-noir",
+      "image": "/img/perf-noir-1.jpg",
+      "image2": "/img/perf-noir-2.jpg",
+      "slug": "noir-perfume",
+      "name": "Noir",
+      "categorySlug": "luxury-perfumes",
+      "price": 63500,
+      "variants": [],
+      "colors": [],
+      "description": "Dark, intense and refined.",
+      "stock": 40,
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "perf-oud",
+      "image": "/img/perf-oud-1.jpg",
+      "image2": "/img/perf-oud-2.jpg",
+      "slug": "oud-perfume",
+      "name": "Oud",
+      "categorySlug": "luxury-perfumes",
+      "price": 67500,
+      "variants": [],
+      "colors": [],
+      "description": "Classic Arabian oud.",
+      "stock": 40,
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "perf-amber",
+      "image": "/img/perf-amber-1.jpg",
+      "image2": "/img/perf-amber-2.jpg",
+      "slug": "amber-perfume",
+      "name": "Amber",
+      "categorySlug": "luxury-perfumes",
+      "price": 67500,
+      "variants": [],
+      "colors": [],
+      "description": "Warm amber perfume.",
+      "stock": 40,
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "perf-floral",
+      "image": "/img/perf-floral-1.jpg",
+      "image2": "/img/perf-floral-2.jpg",
+      "slug": "floral-perfume",
+      "name": "Floral",
+      "categorySlug": "luxury-perfumes",
+      "price": 63500,
+      "variants": [],
+      "colors": [],
+      "description": "Bouquet of white flowers.",
+      "stock": 40,
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "perf-grey",
+      "image": "/img/perf-grey-1.jpg",
+      "image2": "/img/perf-grey-2.jpg",
+      "slug": "grey-perfume",
+      "name": "Grey",
+      "categorySlug": "luxury-perfumes",
+      "price": 67500,
+      "variants": [],
+      "colors": [],
+      "description": "Smoky and modern.",
+      "stock": 40,
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "perf-opal",
+      "image": "/img/perf-opal-1.jpg",
+      "image2": "/img/perf-opal-2.jpg",
+      "slug": "opal-perfume",
+      "name": "OPAL",
+      "categorySlug": "luxury-perfumes",
+      "price": 67500,
+      "variants": [],
+      "colors": [],
+      "description": "Luminous musky floral.",
+      "stock": 40,
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "perf-elixir",
+      "image": "/img/perf-elixir-1.jpg",
+      "image2": "/img/perf-elixir-2.jpg",
+      "slug": "elixir-perfume",
+      "name": "Elixir",
+      "categorySlug": "luxury-perfumes",
+      "price": 67500,
+      "variants": [],
+      "colors": [],
+      "description": "Golden, opulent and warm.",
+      "stock": 40,
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "perf-patchouli",
+      "image": "/img/perf-patchouli-1.jpg",
+      "image2": "/img/perf-patchouli-2.jpg",
+      "slug": "patchouli-perfume",
+      "name": "Patchouli",
+      "categorySlug": "luxury-perfumes",
+      "price": 63500,
+      "variants": [],
+      "colors": [],
+      "description": "Earthy patchouli with a sweet trail.",
+      "stock": 40,
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "perf-black",
+      "image": "/img/perf-black-1.jpg",
+      "image2": "/img/perf-black-2.jpg",
+      "slug": "black-perfume",
+      "name": "Black",
+      "categorySlug": "luxury-perfumes",
+      "price": 67500,
+      "variants": [],
+      "colors": [],
+      "description": "Deep, dark and magnetic.",
+      "stock": 40,
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "perf-aura",
+      "image": "/img/perf-aura-1.jpg",
+      "image2": "/img/perf-aura-2.jpg",
+      "slug": "aura-perfume",
+      "name": "Aura",
+      "categorySlug": "luxury-perfumes",
+      "price": 63500,
+      "variants": [],
+      "colors": [],
+      "description": "Light, airy and radiant.",
+      "stock": 40,
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "body-musk",
+      "image": "/img/cat-body-fragrance-oils.jpg",
+      "slug": "white-musk-body-oil",
+      "name": "White Musk Body Oil",
+      "categorySlug": "body-fragrance-oils",
+      "price": 12000,
+      "variants": [],
+      "colors": [],
+      "description": "Alcohol-free body oil.",
+      "stock": 40,
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "body-rose",
+      "image": "/img/cat-body-fragrance-oils.jpg",
+      "slug": "rose-body-oil",
+      "name": "Rose Body Oil",
+      "categorySlug": "body-fragrance-oils",
+      "price": 12000,
+      "variants": [],
+      "colors": [],
+      "description": "Soft rose body oil.",
+      "stock": 40,
+      "featured": true,
+      "published": true
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-1001",
+      "createdAt": "2026-11-20T10:00:00.000Z",
+      "customer": {
+        "name": "Awa Diop",
+        "email": "awa@example.com",
+        "phone": "+221770000000",
+        "address": "Dakar, Plateau"
+      },
+      "items": [
+        {
+          "productId": "dif-af60",
+          "name": "AF60",
+          "color": "Black",
+          "price": 45000,
+          "qty": 1
+        }
+      ],
+      "total": 45000,
+      "status": "paid"
+    }
+  ],
+  "pages": [
+    {
+      "slug": "privacy-policy",
+      "title": "Privacy Policy",
+      "content": "We respect your privacy and only use your data to process orders."
+    },
+    {
+      "slug": "delivery-returns",
+      "title": "Exchange & Return Policy",
+      "content": "Unopened items can be returned within 7 days of delivery."
+    },
+    {
+      "slug": "terms-conditions",
+      "title": "Terms and Conditions",
+      "content": "By using this site you agree to our terms of sale."
+    }
+  ]
+}
